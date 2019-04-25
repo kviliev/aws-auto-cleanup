@@ -204,6 +204,30 @@
               }
             }
           }
+        },
+        "sagemaker": {
+          "M": {
+            "notebooks": {
+              "M": {
+                "clean": {
+                  "BOOL": true
+                },
+                "ttl": {
+                  "N": "7"
+                }
+              }
+            },
+            "endpoints": {
+              "M": {
+                "clean": {
+                  "BOOL": true
+                },
+                "ttl": {
+                  "N": "7"
+                }
+              }
+            }
+          }
         }
       }
     }
