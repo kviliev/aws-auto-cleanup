@@ -13,8 +13,9 @@ class SageMakerCleanup:
         self.region = region
         
         try:
-            self.client = boto3.client('sagemaker', region_name=region)
+            self.client = boto3.client('sagemaker', region_name=self.region)
         except:
+            self.logging.info("SageMaker is not supported in region '%s'." % self.region)
             self.logging.error(str(sys.exc_info()))
     
     
@@ -50,7 +51,7 @@ class SageMakerCleanup:
                         if resource_status == 'InService':
                             if not self.settings.get('general', {}).get('dry_run', True):
                                 try:
-                                    self.client.describe_notebook_instance(NotebookInstanceName=resource_id)
+                                    self.client.delete_notebook_instance(NotebookInstanceName=resource_id)
                                 except:
                                     self.logging.error("Could not delete SageMaker Notebook '%s'." % resource_id)
                                     self.logging.error(str(sys.exc_info()))

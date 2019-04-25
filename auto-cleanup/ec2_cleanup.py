@@ -15,9 +15,10 @@ class EC2Cleanup:
         self.account_id = boto3.client('sts').get_caller_identity().get('Account')
         
         try:
-            self.client = boto3.client('ec2', region_name=region)
-            self.resource = boto3.resource('ec2', region_name=region)
+            self.client = boto3.client('ec2', region_name=self.region)
+            self.resource = boto3.resource('ec2', region_name=self.region)
         except:
+            self.logging.info("EC2 is not supported in region '%s'." % self.region)
             self.logging.error(str(sys.exc_info()))
     
     

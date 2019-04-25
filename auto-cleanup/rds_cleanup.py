@@ -13,8 +13,9 @@ class RDSCleanup:
         self.region = region
         
         try:
-            self.client = boto3.client('rds', region_name=region)
+            self.client = boto3.client('rds', region_name=self.region)
         except:
+            self.logging.info("RDS is not supported in region '%s'." % self.region)
             self.logging.error(str(sys.exc_info()))
     
     

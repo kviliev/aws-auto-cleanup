@@ -13,8 +13,9 @@ class EMRCleanup:
         self.region = region
         
         try:
-            self.client = boto3.client('emr', region_name=region)
+            self.client = boto3.client('emr', region_name=self.region)
         except:
+            self.logging.info("EMR is not supported in region '%s'." % self.region)
             self.logging.error(str(sys.exc_info()))
     
     
