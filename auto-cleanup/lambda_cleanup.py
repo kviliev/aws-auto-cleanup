@@ -13,8 +13,9 @@ class LambdaCleanup:
         self.region = region
         
         try:
-            self.client = boto3.client('lambda', region_name=region)
+            self.client = boto3.client('lambda', region_name=self.region)
         except:
+            self.logging.info("Lambda is not supported in region '%s'." % self.region)
             self.logging.error(str(sys.exc_info()))
 
 
