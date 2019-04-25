@@ -2,7 +2,14 @@
 
 ## [Unreleased](https://github.com/servian/aws-auto-cleanup/tree/HEAD)
 
-[Full Changelog](https://github.com/servian/aws-auto-cleanup/compare/v0.7...HEAD)
+[Full Changelog](https://github.com/servian/aws-auto-cleanup/compare/v0.8...HEAD)
+
+**Implemented enhancements:**
+
+- AWS IAM support [\#24](https://github.com/servian/aws-auto-cleanup/issues/24)
+
+## [v0.8](https://github.com/servian/aws-auto-cleanup/tree/v0.8) (2019-04-25)
+[Full Changelog](https://github.com/servian/aws-auto-cleanup/compare/v0.7...v0.8)
 
 **Implemented enhancements:**
 
@@ -11,6 +18,7 @@
 
 **Merged pull requests:**
 
+- IAM support [\#27](https://github.com/servian/aws-auto-cleanup/pull/27) ([maratlevit](https://github.com/maratlevit))
 - Security Groups support [\#26](https://github.com/servian/aws-auto-cleanup/pull/26) ([maratlevit](https://github.com/maratlevit))
 
 ## [v0.7](https://github.com/servian/aws-auto-cleanup/tree/v0.7) (2019-04-23)

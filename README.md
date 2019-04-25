@@ -122,6 +122,8 @@ Table includes the `clean` attribute which informs Auto Cleanup if the service s
 | Redshift       | Clusters        | True  | 7    |
 |                | Snapshots       | True  | 7    |
 | S3             | Buckets         | True  | 7    |
+| SageMaker      | Notebooks       | True  | 7    |
+|                | Endpoints       | True  | 7    |
 
 #### Regions
 
@@ -195,6 +197,8 @@ The below table lists the resource attribute that should be used for unique iden
 | RDS Instances         | DB Instance Identifier | `rds:snapshot:my_rds_instance`                 |
 | RDS Snapshots         | DB Snapshot Name       | `rds:snapshot:my_rds_instance_snapshot`        |
 | S3 Buckets            | Bucket Name            | `s3:bucket:auto-cleanup-bucket`                |
+| SageMaker Notebooks   | Notebook Instance Name | `sagemaker:notebook:my-notebook`               |
+| SageMaker Endpoints   | EndpointName           | `sagemaker:endpoint:my-endpoint`               |
 
 ## Resource Tree
 

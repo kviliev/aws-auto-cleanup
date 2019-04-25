@@ -101,6 +101,13 @@ provider:
         - s3:List*
         - s3:PutObject
       Resource: "*"
+    - Effect: Allow
+      Action:
+        - sagemaker:DeleteEndpoint
+        - sagemaker:DeleteNotebookInstance
+        - sagemaker:ListEndpoints
+        - sagemaker:ListNotebookInstances
+      Resource: "*"
   tracing:
     lambda: true
 
