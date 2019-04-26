@@ -1,8 +1,8 @@
 {
-	"recommendations": [
+  "recommendations": [
+    "ms-python.python",
     "aaron-bond.better-comments",
     "eamodio.gitlens",
     "davidanson.vscode-markdownlint",
-    "redhat.vscode-yaml"
-	]
+    "redhat.vscode-yaml"]
 }
